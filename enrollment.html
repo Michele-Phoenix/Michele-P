@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaires</title>
+    <link rel="stylesheet" href="styling.css">
+    </head>
+<body style="text-align:center; background-color:rgba(6, 60, 63, 0.733);" >
+    <h1>University Enrollment</h1>
+
+
+<form action="table.php"  method="POST">
+<label for="name">Your Full name:</label><br>
+<input type="text" id="name" name="name" ><br><br>
+
+<label for="birth">Date of birth</label><br>
+<input type="date" id="birth" name="birth"  required><br><br>
+
+<label for="age">Age</label><br>
+<input type="number" id="age" name="age" required><br><br>
+
+<label for="gender">Gender</label><br>
+      <input type="radio" id="female" name="gender" value="Female" required>Female<br>
+      <input type="radio" id="male" name="gender" value="Male" required>Male<br>
+      <input type="radio" id="prefer" name="gender" value="Prefer not to say" required>Prefer not to say<br><br>
+
+<label for="ma">ID number</label><br>
+<input type="number" id="ma" name="na"  required><br><br>
+
+<label for="email">Email</label><br>
+<input type="text" id="email" name="email" required><br><br>
+
+<label for="cno">Cellphone number</label><br>
+<input type="number" id="cno" name="cno" required><br><br>
+
+<label for="Edpt">Educational department</label><br>
+<input type="text" id="Edpt" name="Edpt"   required><br><br>
+
+<label for="class section">Choose class section</label><br>
+<select id="class section" name="section" required>
+    <option value="LT-3">LT-3</option>
+    <option value="LT-2">LT-2</option>
+    <option value="LT-1">LT-1</option>
+</select><br><br>
+
+<label for="hd">Head of department</label><br>
+<input type="text" id="hd" name="hd"   required><br><br>
+
+<label for="emgno"> Home contacts</label><br>
+<input type="number" id="emgno" name="emgno"   required><br><br>
+
+<label for="range">Rate the schools services here below:</label><br><br>
+<input type="range" id="range" name="range" min="0" max="10" value="5">
+<span id="rangeValue">5</span><br><br>
+
+<script>
+    const rangeInput = document.getElementById('range');
+    const rangeValue = document.getElementById('rangeValue');
+
+    rangeInput.addEventListener('input', () => {
+        rangeValue.textContent = rangeInput.value;
+    });
+</script>
+
+<label for="color">Do you think the color used on this website is the right one?</label><br>
+<label for="color">If not, would please choose a color below</label><br>
+<input type="color" id="color" name="color"value="#0000ff"><br><br>
+
+<input type ="submit" value="Submit">
+
+</form>
+</body>
+</html>
